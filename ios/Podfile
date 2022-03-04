@@ -12,6 +12,8 @@ target 'music4me' do
     :hermes_enabled => false
   )
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
   target 'music4meTests' do
     inherit! :complete
     # Pods for testing

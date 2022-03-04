@@ -81,4 +81,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '80%',
   },
+  modalText: {
+    fontSize: 20, 
+    color: 'yellow',
+    marginVertical: 120,
+    textAlign: 'center',
+    fontFamily: 'arial',
+  },
 });

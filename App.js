@@ -14,20 +14,20 @@ const Stack = createStackNavigator();
 const App = ({navigaton}) => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={'Quotes'}>
-        <Stack.Screen
-          name="Search"
-          component={SearchScreen}
-          options={{
-            title: 'Music 4 Me',
-            headerLeft: null,
-          }}
-        />
+      <Stack.Navigator initialRouteName={'Player'}>
         <Stack.Screen
           name="Player"
           component={MusicPlayer}
           options={{
             title: 'Music 4 Me',
+          }}
+        />
+        {/* <Stack.Screen
+          name="Search"
+          component={SearchScreen}
+          options={{
+            title: 'Music 4 Me',
+            headerLeft: null,
           }}
         />
         <Stack.Screen
@@ -47,7 +47,7 @@ const App = ({navigaton}) => {
               </View>
             ),
           })}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -40,12 +40,12 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = music4me/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = music4me/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = music4me/main.m; sourceTree = "<group>"; };
-		2864BF60FC5BB3AFE3D6DE64 /* Pods-music4me-music4meTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me-music4meTests.release.xcconfig"; path = "Target Support Files/Pods-music4me-music4meTests/Pods-music4me-music4meTests.release.xcconfig"; sourceTree = "<group>"; };
-		2E344A21ECC841CF8F24AC55 /* Pods-music4me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me.release.xcconfig"; path = "Target Support Files/Pods-music4me/Pods-music4me.release.xcconfig"; sourceTree = "<group>"; };
-		607F4DBF2E6E67B6E8B50BAE /* Pods-music4me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me.debug.xcconfig"; path = "Target Support Files/Pods-music4me/Pods-music4me.debug.xcconfig"; sourceTree = "<group>"; };
-		7AD2B3FACDDFAF7B652F4015 /* Pods-music4me-music4meTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me-music4meTests.debug.xcconfig"; path = "Target Support Files/Pods-music4me-music4meTests/Pods-music4me-music4meTests.debug.xcconfig"; sourceTree = "<group>"; };
+		222FB73C607FACCBE9E0F8F1 /* Pods-music4me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me.debug.xcconfig"; path = "Target Support Files/Pods-music4me/Pods-music4me.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = music4me/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81DFF36409E1E6C60FFD341E /* libPods-music4me.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-music4me.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D3DA16DE3B2FF258F2C43D /* Pods-music4me-music4meTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me-music4meTests.debug.xcconfig"; path = "Target Support Files/Pods-music4me-music4meTests/Pods-music4me-music4meTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9F32113792829E58B3C38CF /* Pods-music4me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me.release.xcconfig"; path = "Target Support Files/Pods-music4me/Pods-music4me.release.xcconfig"; sourceTree = "<group>"; };
+		AC24D8C13C834C495D96FEE1 /* Pods-music4me-music4meTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music4me-music4meTests.release.xcconfig"; path = "Target Support Files/Pods-music4me-music4meTests/Pods-music4me-music4meTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -109,6 +109,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3E32DDE5E0D6F8889CAB60A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				222FB73C607FACCBE9E0F8F1 /* Pods-music4me.debug.xcconfig */,
+				A9F32113792829E58B3C38CF /* Pods-music4me.release.xcconfig */,
+				99D3DA16DE3B2FF258F2C43D /* Pods-music4me-music4meTests.debug.xcconfig */,
+				AC24D8C13C834C495D96FEE1 /* Pods-music4me-music4meTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,8 +136,8 @@
 				00E356EF1AD99517003FC87E /* music4meTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				8EF6A30A3D4BFBB6CB5A1C5D /* Pods */,
 				10D846AF2748474B00C5AA58 /* music4me-Bridging-Header.h */,
+				3E32DDE5E0D6F8889CAB60A1 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -140,17 +151,6 @@
 				00E356EE1AD99517003FC87E /* music4meTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8EF6A30A3D4BFBB6CB5A1C5D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				607F4DBF2E6E67B6E8B50BAE /* Pods-music4me.debug.xcconfig */,
-				2E344A21ECC841CF8F24AC55 /* Pods-music4me.release.xcconfig */,
-				7AD2B3FACDDFAF7B652F4015 /* Pods-music4me-music4meTests.debug.xcconfig */,
-				2864BF60FC5BB3AFE3D6DE64 /* Pods-music4me-music4meTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,7 +434,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AD2B3FACDDFAF7B652F4015 /* Pods-music4me-music4meTests.debug.xcconfig */;
+			baseConfigurationReference = 99D3DA16DE3B2FF258F2C43D /* Pods-music4me-music4meTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,7 +462,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2864BF60FC5BB3AFE3D6DE64 /* Pods-music4me-music4meTests.release.xcconfig */;
+			baseConfigurationReference = AC24D8C13C834C495D96FEE1 /* Pods-music4me-music4meTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,17 +487,19 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 607F4DBF2E6E67B6E8B50BAE /* Pods-music4me.debug.xcconfig */;
+			baseConfigurationReference = 222FB73C607FACCBE9E0F8F1 /* Pods-music4me.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W797RDXD32;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = music4me/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -508,22 +510,25 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "music4me-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E344A21ECC841CF8F24AC55 /* Pods-music4me.release.xcconfig */;
+			baseConfigurationReference = A9F32113792829E58B3C38CF /* Pods-music4me.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W797RDXD32;
 				INFOPLIST_FILE = music4me/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -533,6 +538,7 @@
 				PRODUCT_NAME = music4me;
 				SWIFT_OBJC_BRIDGING_HEADER = "music4me-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -594,7 +600,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -653,7 +658,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;

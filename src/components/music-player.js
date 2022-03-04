@@ -8,6 +8,8 @@ import {
   FlatList,
   Animated,
   Dimensions,
+  Button,
+  Linking
 } from 'react-native';
 
 import TrackPlayer, {
@@ -26,7 +28,10 @@ import {styles} from './styles/music-player-style';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import LinearGradient from 'react-native-linear-gradient';
+import Modal from "react-native-modal";
 
 import songs from '../assets/data';
 
@@ -67,6 +72,7 @@ const MusicPlayer = ({item, style}) => {
   const [trackArtwork, setTrackArtwork] = useState();
   const [trackArtist, setTrackArtist] = useState();
   const [trackTitle, setTrackTitle] = useState();
+  const [trackQuote, setTrackQuote] = useState();
 
   const scrollX = useRef(new Animated.Value(0)).current;
   const [songIndex, setSongIndex] = useState(0);
@@ -80,6 +86,11 @@ const MusicPlayer = ({item, style}) => {
   const opacity = useRef(new Animated.Value(1)).current;
   const reverseOpacity = useRef(new Animated.Value(0)).current;
   const [liked, setLiked] = useState(false);
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
 
   const like = value => {
     Animated.sequence([
@@ -122,10 +133,11 @@ const MusicPlayer = ({item, style}) => {
   useTrackPlayerEvents([Event.PlaybackTrackChanged], async event => {
     if (event.type === Event.PlaybackTrackChanged && event.nextTrack !== null) {
       const track = await TrackPlayer.getTrack(event.nextTrack);
-      const {title, artwork, artist} = track;
+      const {title, artwork, artist, quote} = track;
       setTrackTitle(title);
       setTrackArtwork(artwork);
       setTrackArtist(artist);
+      setTrackQuote(quote);
     }
   });
 
@@ -201,8 +213,13 @@ const MusicPlayer = ({item, style}) => {
     );
   };
 
+  const privacyAndTermsOfUseLink = () => {
+    Linking.openURL('https://cedric012102.wixsite.com/music4me');
+  };
+
   return (
     <SafeAreaView style={styles.container}>
+      <LinearGradient colors={['#255C99', '#F4B393', '#7EA3CC']} style={styles.container}>
       <View style={styles.mainContainer}>
         <View style={{width: width}}>
           <Animated.FlatList
@@ -321,16 +338,24 @@ const MusicPlayer = ({item, style}) => {
               color={repeatMode !== 'off' ? '#FFD369' : '#777777'}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => {}}>
-            <Ionicons name="share-outline" size={30} color="#777777" />
+          <TouchableOpacity onPress={privacyAndTermsOfUseLink}>
+            <MaterialIcons name="privacy-tip" size={30} color="#777777" />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={toggleModal}>
             <Ionicons name="ellipsis-horizontal" size={30} color="#777777" />
+            <Modal isVisible={isModalVisible}>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.modalText}>{trackQuote}</Text>
+          <Button title="Go Back" onPress={toggleModal} />
+        </View>
+      </Modal>
           </TouchableOpacity>
         </View>
       </View>
+      </LinearGradient>
     </SafeAreaView>
   );
+
 };
 
 export default MusicPlayer;
